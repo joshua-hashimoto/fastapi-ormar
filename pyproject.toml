@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "fastapi+ormar"
+version = "0.1.0"
+description = ""
+authors = ["joshua-hashimoto <dropscar041205@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.96.0"
+uvicorn = "^0.22.0"
+ormar = "^0.12.1"
+alembic = "^1.11.1"
+python-dotenv = "^1.0.0"
+aiosqlite = "^0.19.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.270"
+
+[tool.ruff]
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    "migrations",
+]
+select = [
+    "F",
+    "E",
+    "W",
+    "I",
+    "B",
+    "PL",
+    "PD",
+    "NPY",
+    "DJ",
+    "RUF",
+    "UP",
+]
+ignore = [
+    "B008",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
